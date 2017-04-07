@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "SENDING");
                     int obj = 0;
                     try {
-                        obj = controller.post(bytes.toString());
+                        obj = controller.post(bytes);
                         Log.d(TAG, "Received: " + String.valueOf(obj));
                     } catch (Exception e) {
                         Log.d(TAG, e.toString());

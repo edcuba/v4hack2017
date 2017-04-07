@@ -2,6 +2,7 @@ package io.github.edynox.riot;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -13,9 +14,9 @@ import java.util.Scanner;
 import javax.net.ssl.HttpsURLConnection;
 
 public class AskServer{
-    private String default_url = "http://10.10.4.212:55555";
+    private String default_url = "http://10.10.4.136:54269";
 
-    public int post(String request) throws Exception {
+    public int post(byte[] request) throws Exception {
 
         String response = "";
         URL url = new URL(default_url);
@@ -23,17 +24,16 @@ public class AskServer{
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(15000);
         conn.setConnectTimeout(15000);
-        conn.setRequestMethod("GET");
+        conn.setRequestMethod("POST");
         conn.setDoInput(true);
         conn.setDoOutput(true);
+        conn.setRequestProperty( "Content-Type", "application/octet-stream");
+        conn.setRequestProperty( "Content-Length", Integer.toString(request.length));
 
+        try(DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
+            wr.write(request);
+        }
 
-        OutputStream os = conn.getOutputStream();
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-        writer.write(request);
-        writer.flush();
-        writer.close();
-        os.close();
         int objId = 0;
 
         int responseCode = conn.getResponseCode();
@@ -42,7 +42,7 @@ public class AskServer{
             String line;
             BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
             while ((line=br.readLine()) != null) {
-                if (line.contains("object:")) {
+                if (line.contains("Object-id:")) {
                     Scanner in = new Scanner(line);
                     objId = in.nextInt();
                     break;
