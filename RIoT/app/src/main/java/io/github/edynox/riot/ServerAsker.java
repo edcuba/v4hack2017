@@ -1,25 +1,21 @@
 package io.github.edynox.riot;
-
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class AskServer{
-    private String default_url = "http://10.10.4.136:54269";
+public class ServerAsker{
+    private String address = "http://10.10.4.212:54269";
 
     public int post(byte[] request) throws Exception {
 
         String response = "";
-        URL url = new URL(default_url);
+        URL url = new URL(address);
 
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(15000);
