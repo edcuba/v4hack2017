@@ -1,6 +1,7 @@
 package io.github.edynox.riot;
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
@@ -24,12 +25,12 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Size;
+import android.util.SparseIntArray;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import java.io.File;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +38,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "RIoTApp";
-    private Button takePictureButton;
+    private Button takePic;
     private TextureView textureView;
     private String cameraId;
     protected CameraDevice cameraDevice;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private Handler mBackgroundHandler;
     private HandlerThread mBackgroundThread;
     private ServerAsker controller;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,12 +59,12 @@ public class MainActivity extends AppCompatActivity {
         textureView = (TextureView) findViewById(R.id.texture);
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
-        takePictureButton = (Button) findViewById(R.id.btn_takepicture);
-        assert takePictureButton != null;
-        takePictureButton.setOnClickListener(new View.OnClickListener() {
+        takePic = (Button) findViewById(R.id.btn_takepicture);
+        assert takePic != null;
+        takePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePicture();
+                analysePic();
             }
         });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
@@ -71,12 +73,11 @@ public class MainActivity extends AppCompatActivity {
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-            //open your camera here
             openCamera();
         }
+
         @Override
         public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-            // Transform you image captured size according to the surface width and height
         }
         @Override
         public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
@@ -113,11 +114,13 @@ public class MainActivity extends AppCompatActivity {
             createCameraPreview();
         }
     };
+
     protected void startBackgroundThread() {
         mBackgroundThread = new HandlerThread("Camera Background");
         mBackgroundThread.start();
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
     }
+
     protected void stopBackgroundThread() {
         mBackgroundThread.quitSafely();
         try {
@@ -128,7 +131,22 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    protected void takePicture() {
+
+    protected void askServer(byte[] data){
+        Log.d(TAG, "SENDING");
+        int obj = 0;
+        try {
+            obj = controller.post(data);
+            Log.d(TAG, "Received: " + String.valueOf(obj));
+        } catch (Exception e) {
+            Log.d(TAG, e.toString());
+        }
+        Intent switchActivity;
+        switchActivity = new Intent(MainActivity.this, LampActivity.class);
+        startActivity(switchActivity);
+    }
+
+    protected void analysePic() {
         if(null == cameraDevice) {
             Log.e(TAG, "cameraDevice is null");
             return;
@@ -143,6 +161,8 @@ public class MainActivity extends AppCompatActivity {
             final CaptureRequest.Builder captureBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
             captureBuilder.addTarget(reader.getSurface());
             captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
+
+            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, 90);
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader reader) {
@@ -151,14 +171,7 @@ public class MainActivity extends AppCompatActivity {
                     ByteBuffer buffer = image.getPlanes()[0].getBuffer();
                     byte[] bytes = new byte[buffer.capacity()];
                     buffer.get(bytes);
-                    Log.d(TAG, "SENDING");
-                    int obj = 0;
-                    try {
-                        obj = controller.post(bytes);
-                        Log.d(TAG, "Received: " + String.valueOf(obj));
-                    } catch (Exception e) {
-                        Log.d(TAG, e.toString());
-                    }
+                    askServer(bytes);
                 }
             };
             reader.setOnImageAvailableListener(readerListener, mBackgroundHandler);
