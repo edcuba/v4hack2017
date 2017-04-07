@@ -5,7 +5,7 @@ PORT = 54269
 
 class Handler(http.server.SimpleHTTPRequestHandler):
 
-    #Handler for the GET requests
+    #Handler for the POST requests
     def do_POST(self):
         print(self.headers)
         amount = self.headers['content-length']
