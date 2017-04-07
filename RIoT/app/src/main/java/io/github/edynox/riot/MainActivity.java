@@ -1,5 +1,6 @@
 package io.github.edynox.riot;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -91,16 +92,12 @@ public class MainActivity extends AppCompatActivity
         Utils.bitmapToMat(bitmap, img1);
         Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY);
         img1.convertTo(img1, 0); //converting the image to match with the type of the cameras image
-        descriptors1 = new Mat();
         keypoints1 = new MatOfKeyPoint();
         detector.detect(img1, keypoints1);
         descriptor.compute(img1, keypoints1, descriptors1);
-        Log.d(TAG, "dependency init done");
     }
 
     public MainActivity() {
-
-        Log.i(TAG, "Instantiated new " + this.getClass());
     }
 
     /**
@@ -108,15 +105,14 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-        Log.i(TAG, "called onCreate");
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
-        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.tutorial1_activity_java_surface_view);
+        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.camView);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
         tvName = (TextView) findViewById(R.id.text1);
+        descriptors1 = new Mat();
     }
 
     @Override
@@ -149,38 +145,55 @@ public class MainActivity extends AppCompatActivity
         h = height;
     }
 
+    private void setText(final String value){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                tvName.setText(value);
+            }
+        });
+    }
+
     public void onCameraViewStopped() {
     }
 
+    /*
     public Mat recognize(Mat aInputFrame) {
-        if (descriptors1 == null) {
-            Log.d("recognize", "null");
-            return aInputFrame;
-        }
+
         Imgproc.cvtColor(aInputFrame, aInputFrame, Imgproc.COLOR_RGB2GRAY);
         descriptors2 = new Mat();
         keypoints2 = new MatOfKeyPoint();
         detector.detect(aInputFrame, keypoints2);
         descriptor.compute(aInputFrame, keypoints2, descriptors2);
         // Matching
+
         MatOfDMatch matches = new MatOfDMatch();
         if (img1.type() == aInputFrame.type()) {
             matcher.match(descriptors1, descriptors2, matches);
         } else {
             return aInputFrame;
         }
+
         List<DMatch> matchesList = matches.toList();
 
         Double max_dist = 0.0;
         Double min_dist = 100.0;
+        Double avr = 0.0;
 
         for (int i = 0; i < matchesList.size(); i++) {
             Double dist = (double) matchesList.get(i).distance;
+            avr += dist;
             if (dist < min_dist)
                 min_dist = dist;
             if (dist > max_dist)
                 max_dist = dist;
         }
+
+        avr = avr / matchesList.size();
+
+        setText("Min:" + min_dist.toString() + "|Avg:" + avr.toString());
+
+        return aInputFrame;
 
         LinkedList<DMatch> good_matches = new LinkedList<DMatch>();
         for (int i = 0; i < matchesList.size(); i++) {
@@ -199,9 +212,42 @@ public class MainActivity extends AppCompatActivity
         Imgproc.resize(outputImg, outputImg, aInputFrame.size());
 
         return outputImg;
-    }
+    }*/
 
     public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
-        return recognize(inputFrame.rgba());
+        Mat aInputFrame = inputFrame.gray();
+        descriptors2 = new Mat();
+        keypoints2 = new MatOfKeyPoint();
+        detector.detect(aInputFrame, keypoints2);
+        descriptor.compute(aInputFrame, keypoints2, descriptors2);
+        // Matching
+
+        MatOfDMatch matches = new MatOfDMatch();
+        if (img1.type() == aInputFrame.type()) {
+            matcher.match(descriptors1, descriptors2, matches);
+        } else {
+            return aInputFrame;
+        }
+
+        List<DMatch> matchesList = matches.toList();
+
+        Double max_dist = 0.0;
+        Double min_dist = 100.0;
+        Double avr = 0.0;
+
+        for (int i = 0; i < matchesList.size(); i++) {
+            Double dist = (double) matchesList.get(i).distance;
+            avr += dist;
+            if (dist < min_dist)
+                min_dist = dist;
+            if (dist > max_dist)
+                max_dist = dist;
+        }
+
+        avr = avr / matchesList.size();
+
+        setText("Min:" + min_dist.toString() + "|Avg:" + avr.toString());
+
+        return aInputFrame;
     }
 }
