@@ -44,7 +44,7 @@
       <file leaf-file-name="activity_light.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="4680">
               <caret line="260" column="39" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
               <folding />
             </state>
@@ -57,19 +57,9 @@
       <file leaf-file-name="Camera2BasicFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="930" column="16" selection-start-line="930" selection-start-column="16" selection-end-line="930" selection-end-column="16" />
-              <folding>
-                <element signature="e#32962#33393#0" expanded="true" />
-                <element signature="e#33392#33393#0" expanded="true" />
-                <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-                <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-                <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-                <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-                <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-                <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-                <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-              </folding>
+            <state relative-caret-position="137">
+              <caret line="930" column="41" selection-start-line="930" selection-start-column="41" selection-end-line="930" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,35 +67,33 @@
       <file leaf-file-name="ServerAsker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/ServerAsker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="918">
               <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-              <folding>
-                <element signature="e#1131#1149#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CameraActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/CameraActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="190">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splash.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/splash.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1804,6 +1792,8 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_light.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/LightFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/ServerAsker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/CameraActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/splash.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java" />
       </list>
     </option>
@@ -1838,12 +1828,75 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RIoT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RIoT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RIoT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RIoT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RIoT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -2184,15 +2237,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9458545" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2205,6 +2256,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2225,6 +2278,52 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="260" column="39" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16596">
+          <caret line="922" column="40" selection-start-line="922" selection-start-column="40" selection-end-line="922" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/ServerAsker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/splash.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="102" column="44" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
           <folding />
@@ -2238,17 +2337,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2275,17 +2364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7614">
           <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2308,7 +2387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2367,17 +2445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="929" column="12" selection-start-line="929" selection-start-column="12" selection-end-line="931" selection-end-column="86" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2392,14 +2460,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/LightActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/LightActivity.java" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -2415,17 +2476,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2452,17 +2503,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7614">
           <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2536,25 +2577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="260" column="39" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/CameraActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -2568,29 +2590,49 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/splash.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_light.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="260" column="39" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/ServerAsker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
+        <state relative-caret-position="918">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="930" column="16" selection-start-line="930" selection-start-column="16" selection-end-line="930" selection-end-column="16" />
-          <folding>
-            <element signature="e#32962#33393#0" expanded="true" />
-            <element signature="e#33392#33393#0" expanded="true" />
-            <marker date="1491648408580" expanded="false" signature="38468:38627" ph="(dialogInterface, i) → {" />
-            <marker date="1491648408580" expanded="false" signature="38695:38722" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39157:39184" ph="&quot;This sample needs camera permission.&quot;" />
-            <marker date="1491648408580" expanded="false" signature="39246:39400" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="39633:39660" ph="}" />
-            <marker date="1491648408580" expanded="false" signature="39754:39924" ph="(dialog, which) → {" />
-            <marker date="1491648408580" expanded="false" signature="40188:40223" ph="}" />
-          </folding>
+        <state relative-caret-position="137">
+          <caret line="930" column="41" selection-start-line="930" selection-start-column="41" selection-end-line="930" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

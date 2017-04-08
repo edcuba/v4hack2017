@@ -928,10 +928,13 @@ public class Camera2BasicFragment extends Fragment
         public void changeActivity(String id) {
             Log.d(TAG, id);
             unlockFocus();
-            if (Integer.parseInt(id) == 1) { // THIS IS RASPBERRY PI
+            int i = Integer.parseInt(id);
+            if (i == 1) { // THIS IS RASPBERRY PI
                 Fragment pref = new LightFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.container, pref).addToBackStack(null).commit();
+            } else if (i == 3) {
+                showToast("Damm! You are on fire!.");
             } else { // THIS IS STG ELSE
                 showToast("No IoT devices detected.");
             }
