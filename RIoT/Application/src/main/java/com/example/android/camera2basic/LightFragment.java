@@ -1,5 +1,6 @@
 package com.example.android.camera2basic;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
@@ -7,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 public class LightFragment extends Fragment {
     private at.markushi.ui.CircleButton btn_redcolor;
@@ -78,7 +78,9 @@ class MyTouchListener implements View.OnTouchListener {
 class BackListener implements View.OnTouchListener {
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        
+       /* Fragment pref = new LightFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.container, pref).commit();*/
         return true;
     }
 
