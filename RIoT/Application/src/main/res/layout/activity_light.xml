@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     tools:context="com.example.android.camera2basic.LightActivity">
 
@@ -255,12 +254,6 @@
                     android:textColor="@color/cardview_light_background"/>
 
             </LinearLayout>
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:/>
 
         </LinearLayout>
 
