@@ -30,7 +30,7 @@
         android:theme="@style/MaterialTheme">
         <activity
             android:name=".CameraActivity"
-            android:label="@string/app_name">
+            android:label="RIoT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -39,7 +39,7 @@
             android:layout_marginLeft="70dp"
             android:layout_marginRight="70dp"
             android:background="@drawable/roundedbutton"
-            android:text="@string/picture"
+            android:text="CONTROL"
             android:layout_gravity="center_horizontal|center"
             android:textColor="@color/cardview_light_background"/>
 
