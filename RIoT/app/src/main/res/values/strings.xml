@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">RIoT</string>
-    <string name="take_picture">Take a picture</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-
-    <string name="title_activity_lamp">LampActivity</string>
-</resources>
