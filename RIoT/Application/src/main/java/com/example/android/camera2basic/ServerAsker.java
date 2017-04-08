@@ -49,4 +49,24 @@ public class ServerAsker{
         }
         return objId;
     }
+
+    public boolean request(int id, int value) throws Exception {
+        URL url = new URL(address);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setReadTimeout(15000);
+        conn.setConnectTimeout(15000);
+        conn.setRequestMethod("PUT");
+        conn.setDoOutput(true);
+        conn.setRequestProperty( "Content-Type", "text/html");
+        conn.setRequestProperty( "Object-id", Integer.toString(id));
+        conn.setRequestProperty( "Request-id", Integer.toString(value));
+
+        int responseCode = conn.getResponseCode();
+
+        if (responseCode == HttpsURLConnection.HTTP_OK) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
