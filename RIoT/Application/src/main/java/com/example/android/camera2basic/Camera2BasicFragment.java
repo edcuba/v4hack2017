@@ -844,7 +844,7 @@ public class Camera2BasicFragment extends Fragment
                                                @NonNull TotalCaptureResult result) {
                     showToast("Sent");
                     Log.d(TAG, "SENT");
-                    unlockFocus();
+                    //unlockFocus();
                 }
             };
 
