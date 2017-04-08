@@ -925,31 +925,31 @@ public class Camera2BasicFragment extends Fragment
             controller = new ServerAsker();
         }
 
-        public void changeActivity(int id) {
-            Fragment pref = new LightFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.container, pref).addToBackStack(null).commit();
+        public void changeActivity(String id) {
+            Log.d(TAG, id);
+            unlockFocus();
+            if (Integer.parseInt(id) == 1) { // THIS IS RASPBERRY PI
+                Fragment pref = new LightFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.container, pref).addToBackStack(null).commit();
+            } else { // THIS IS STG ELSE
+                showToast("No IoT devices detected.");
+            }
         }
-
-        private byte[] bytes;
 
         @Override
         public void run() {
             ByteBuffer buffer = mImage.getPlanes()[0].getBuffer();
-            bytes = new byte[buffer.remaining()];
+            byte[] bytes = new byte[buffer.remaining()];
             buffer.get(bytes);
-            new Thread(new Runnable() {
-                public void run(){
-                    try {
-                        int id = controller.post(bytes);
-                        changeActivity(id);
-                    } catch (Exception e) {
-                        Log.d(TAG, e.toString());
-                    }
-                }
-            }).start();
+            try {
+                String id = controller.post(bytes);
+                changeActivity(id);
+            } catch (Exception e) {
+                Log.d(TAG, e.toString());
+            }
+            mImage.close();
         }
-
     }
 
     /**
