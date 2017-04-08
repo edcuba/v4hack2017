@@ -1,4 +1,6 @@
 package com.example.android.camera2basic;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,9 +14,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class ServerAsker{
     private String address = "http://10.10.4.212:54269";
 
-    public int post(byte[] request) throws Exception {
-
-        String response = "";
+    public String post(byte[] request) throws Exception {
         URL url = new URL(address);
 
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -30,24 +30,13 @@ public class ServerAsker{
             wr.write(request);
         }
 
-        int objId = 0;
-
         int responseCode = conn.getResponseCode();
-
         if (responseCode == HttpsURLConnection.HTTP_OK) {
-            String line;
-            BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            while ((line=br.readLine()) != null) {
-                if (line.contains("Object-id:")) {
-                    Scanner in = new Scanner(line);
-                    objId = in.nextInt();
-                    break;
-                }
-            }
+            Log.d("RIoTApp", "OK");
+            return conn.getHeaderField("Object-id");
         } else {
             throw new IOException("BAD RESPONSE");
         }
-        return objId;
     }
 
     public boolean request(int id, int value) throws Exception {
