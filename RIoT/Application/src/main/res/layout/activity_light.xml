@@ -15,7 +15,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="50dp"
                 android:tint="@color/ownyellow"
                 app:srcCompat="@drawable/chip_icon"
                 android:scaleX="2.5"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="Raspberry Pi Sense HAT"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:textColor="@android:color/background_dark"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -254,6 +254,17 @@
                     android:textColor="@color/cardview_light_background"/>
 
             </LinearLayout>
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cb_color="#ffffff"
+                android:src="@drawable/cross_cross"
+                android:scaleX="1.8"
+                android:scaleY="1.8"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
 
