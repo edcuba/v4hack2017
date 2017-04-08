@@ -232,7 +232,7 @@
                 android:layout_marginTop="15dp">
 
                 <Button
-                    android:id="@+id/btn_takepicture"
+                    android:id="@+id/btn_android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/roundedbutton"
@@ -243,11 +243,22 @@
                     android:textColor="@color/cardview_light_background"/>
 
                 <Button
-                    android:id="@+id/btn_takepicture2"
+                    android:id="@+id/btn_krab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/roundedbutton"
                     android:text="The Krab"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/cardview_light_background"/>
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Clear"
                     android:layout_weight="0.5"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"

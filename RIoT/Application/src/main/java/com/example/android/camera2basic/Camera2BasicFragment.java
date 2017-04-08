@@ -422,7 +422,6 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         view.findViewById(R.id.picture).setOnClickListener(this);
-        view.findViewById(R.id.info).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     }
 
@@ -932,17 +931,23 @@ public class Camera2BasicFragment extends Fragment
             fragmentManager.beginTransaction().replace(R.id.container, pref).addToBackStack(null).commit();
         }
 
+        private byte[] bytes;
+
         @Override
         public void run() {
             ByteBuffer buffer = mImage.getPlanes()[0].getBuffer();
-            byte[] bytes = new byte[buffer.remaining()];
+            bytes = new byte[buffer.remaining()];
             buffer.get(bytes);
-            try {
-                int id = controller.post(bytes);
-                changeActivity(id);
-            } catch (Exception e) {
-                Log.d(TAG, e.toString());
-            }
+            new Thread(new Runnable() {
+                public void run(){
+                    try {
+                        int id = controller.post(bytes);
+                        changeActivity(id);
+                    } catch (Exception e) {
+                        Log.d(TAG, e.toString());
+                    }
+                }
+            }).start();
         }
 
     }
