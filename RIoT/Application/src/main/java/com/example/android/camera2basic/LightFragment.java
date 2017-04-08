@@ -95,7 +95,7 @@ public class LightFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.btn_back:
                 getActivity().onBackPressed();
-                break;
+                return;
             case R.id.btn_redcolor:
                 reqid = 0;
                 break;
