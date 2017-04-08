@@ -842,7 +842,6 @@ public class Camera2BasicFragment extends Fragment
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    showToast("Sent");
                     Log.d(TAG, "SENT");
                     //unlockFocus();
                 }
@@ -930,7 +929,7 @@ public class Camera2BasicFragment extends Fragment
         public void changeActivity(int id) {
             Fragment pref = new LightFragment();
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.container, pref).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, pref).addToBackStack(null).commit();
         }
 
         @Override

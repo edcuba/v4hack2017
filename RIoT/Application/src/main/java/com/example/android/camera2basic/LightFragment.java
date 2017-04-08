@@ -36,9 +36,6 @@ public class LightFragment extends Fragment {
         btn_back = (at.markushi.ui.CircleButton) view.findViewById(R.id.btn_back);
 
         MyTouchListener touchListener = new MyTouchListener();
-        BackListener backListener = new BackListener();
-
-        btn_back.setOnTouchListener(backListener);
 
         btn_redcolor.setOnTouchListener(touchListener);
         btn_yellowcolor.setOnTouchListener(touchListener);
@@ -70,17 +67,6 @@ class MyTouchListener implements View.OnTouchListener {
             default:
                 break;
         }
-        return true;
-    }
-
-}
-
-class BackListener implements View.OnTouchListener {
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-       /* Fragment pref = new LightFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, pref).commit();*/
         return true;
     }
 
