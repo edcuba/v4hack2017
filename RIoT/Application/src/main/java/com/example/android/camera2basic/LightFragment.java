@@ -35,39 +35,56 @@ public class LightFragment extends Fragment {
 
         btn_back = (at.markushi.ui.CircleButton) view.findViewById(R.id.btn_back);
 
-        MyTouchListener touchListener = new MyTouchListener();
+        btn_redcolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        btn_redcolor.setOnTouchListener(touchListener);
-        btn_yellowcolor.setOnTouchListener(touchListener);
-        btn_greencolor.setOnTouchListener(touchListener);
-        btn_cyancolor.setOnTouchListener(touchListener);
-        btn_bluecolor.setOnTouchListener(touchListener);
-        btn_purplecolor.setOnTouchListener(touchListener);
-        btn_pinkcolor.setOnTouchListener(touchListener);
+            }
+        });
+        btn_yellowcolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_greencolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_cyancolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_bluecolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_purplecolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_pinkcolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragment().getActivity().onBackPressed();
+            }
+        });
+
         return inflater.inflate(R.layout.activity_light, container, false);
     }
-}
-
-class MyTouchListener implements View.OnTouchListener {
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        switch(v.getId()){
-            case 1:
-                //do stuff for button 1
-                break;
-            case 2:
-                //do stuff for button 2
-                break;
-            case 3:
-                //do stuff for button 3
-                break;
-            case 4:
-                //do stuff for button 4
-                break;
-            default:
-                break;
-        }
-        return true;
-    }
-
 }
